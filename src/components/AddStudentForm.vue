@@ -1,14 +1,21 @@
 <template>
   <form class="form" @submit.prevent="submitForm">
-    <!--
-      TASK:
-      1. Add two input fields:
-         - Name (text)
-         - Age (number)
-      2. Bind both inputs using v-model.
-      3. Add a submit button.
-      4. On submit, call submitForm() to emit 'add-student' with {name, age}.
-    -->
+    <input 
+      type="text" 
+      placeholder="Name" 
+      v-model="name"
+      required
+    />
+
+    <input 
+      type="number" 
+      placeholder="Age" 
+      v-model.number="age"
+      required
+      min="1"
+    />
+
+    <button type="submit">Add student</button>
   </form>
 </template>
 

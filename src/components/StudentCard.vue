@@ -1,12 +1,15 @@
 <template>
   <div class="card">
     <div class="info">
-      <!--
-        TASK:
-        1. Display student name and age via <p> tag.
-      -->
+      <p class="student-name">
+        <strong>{{ student.name }}</strong>
+      </p>
+
+      <p class="student-age">
+        Age: {{ student.age }}
+      </p>
     </div>
-    <button @click="$emit('remove')" class="remove-btn">✖</button>
+    <button @click="$emit('remove', student.id)" class="remove-btn">✖</button>
   </div>
 </template>
 
